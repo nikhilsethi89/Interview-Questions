@@ -13,19 +13,18 @@ class Solution(object):
         """
         if root==None:
             return []
-        path=""
+        path=str(root.val)
         result=[]
-        
-        self.getpath(path,root,result)
-           
+        self.helper(root,path,result)
         return result
     
-    def getpath(self,path,node,result):
+    def helper(self,node,path,result):
+        
         if node.left==None and node.right==None:
-            return result.append(path+str(node.val))
-        if node.left!=None:
-            self.getpath(path+str(node.val)+"->",node.left,result)
-        if node.right!=None:
-            self.getpath(path+str(node.val)+"->",node.right,result)
+            result.append(path)
+        if node.left:
+            self.helper(node.left,path+"->"+str(node.left.val),result)
+        if node.right:
+            self.helper(node.right,path+"->"+str(node.right.val),result)
+        
             
-    
