@@ -6,3 +6,25 @@ Data swarm is awesome. The best thing I liked about is ability to integate with 
 
 - Culture at FB (autonomy of projects, people, mentality of go build it if not already there,ownership of work
 - bootcamp 
+
+
+
+
+questions for interviewer
+
+Since you have data engineers working across different teams how do you make sure they are all connected to each other
+
+How would you explain the team dynamics between employees of different roles, like engineering, product management, and design?
+
+What internal opportunities are there for personal growth (technical, personal, soft skills, etc.)? How have you grown since you joined this company?
+
+
+What is the typical career path for someone in this role?
+
+What are the challenges of this position?
+
+How much time goes into building the data pipeline comapred to working with DS or product managers on defining the key metrics or dashbaords
+
+How frequently do DE change product teams?
+
+
