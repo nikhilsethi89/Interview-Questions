@@ -1,0 +1,44 @@
+Given a string, find the length of the longest substring without repeating characters.
+
+Examples:
+
+Given "abcabcbb", the answer is "abc", which the length is 3.
+
+Given "bbbbb", the answer is "b", with the length of 1.
+
+Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
+
+
+
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        curr_min=0
+        curr_max=0
+        final_min=0
+        final_max=0
+        ind={}
+        
+        if s=='':
+            return 0
+        
+        for i in range(len(s)):
+            if s[i] in ind and ind[s[i]]>=curr_min and  ind[s[i]]<=curr_max:
+                if (curr_max - curr_min) > (final_max-final_min):
+                    final_max=curr_max
+                    final_min=curr_min
+                curr_min=ind[s[i]]+1
+                ind[s[i]]=i
+                curr_max=i
+            curr_max=i
+            ind[s[i]]=i
+        
+        if (curr_max - curr_min) > (final_max-final_min):
+            final_max=curr_max
+            final_min=curr_min
+            
+        return final_max-final_min+1
+                

@@ -1,0 +1,27 @@
+Find all n length Permutation of a given String. 
+OR 
+Print all possible strings of length k that can be formed from a set of n characters. OR.
+Print all possible combinations of k elements from a given string of size n
+
+
+
+
+class solution:
+    def main(self, inp,k):
+        self.k=k
+        self.inp=inp
+        self.ans=[]
+        self.perm_k('')
+        return self.ans
+    
+    def perm_k(self,curr):
+        if len(curr)==self.k:
+            self.ans.append(curr)
+        else:
+            for i in self.inp:
+                self.perm_k(curr +i)
+        
+x=solution()
+print(x.main('ABC',3))
+
+    
